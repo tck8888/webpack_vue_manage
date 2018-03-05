@@ -1,0 +1,30 @@
+{
+  "name": "webpack_vue_manage",
+  "version": "1.0.0",
+  "description": "study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tck8888/webpack_vue_manage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tck8888/webpack_vue_manage/issues"
+  },
+  "homepage": "https://github.com/tck8888/webpack_vue_manage#readme",
+  "dependencies": {
+    "css-loader": "^0.28.10",
+    "vue": "^2.5.13",
+    "vue-loader": "^14.1.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^4.1.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.0.10"
+  }
+}
