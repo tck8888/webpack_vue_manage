@@ -14,15 +14,23 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    'css-loader',
-                    'style-loader'
+                    'style-loader',
+                    'css-loader'
                 ]
             },
             {
-                test: /\.cs(png|gif|jpg|svg|jpeg)$/,
+                test: /\.styl/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'stylus-loader'
+                ]
+            },
+            {
+                test: /\.(png|gif|jpg|svg|jpeg)$/,
                 use: [
                     {
-                        loader: 'url-loader',
+                        loader: 'file-loader',
                         options: {
                             limit: 1024,
                             name: '[name]-aaa.[ext]'
