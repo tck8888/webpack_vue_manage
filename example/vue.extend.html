@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.extend构造器的延伸</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+<h1>vue.extend构造器的扩展实例构造器</h1>
+<hr>
+<div id="author"></div>
+<author></author>
+<script type="text/javascript">
+    var authorExtend = Vue.extend({
+        template: "<p><a :href='authorURL' target='_blank'>{{authorName}}</a></p>",
+        data: function () {
+            return {
+                authorName: "tck",
+                authorURL: "https://github.com/tck8888"
+            }
+        }
+    });
+
+    new authorExtend().$mount("#author");
+    new authorExtend().$mount("author");
+
+</script>
+</body>
+</html>
