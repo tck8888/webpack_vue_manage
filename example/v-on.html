@@ -9,13 +9,34 @@
 <h1>v-on实例</h1>
 <hr>
 <div id="app">
-    {{message}}
+    本场比赛得分：{{score}}
+    <p>
+        <button v-on:click="add">加分</button>
+    </p>
+    <p>
+        <button @click="decrease">减分</button>
+    </p>
+    <p>
+        <input type="text" v-on:keyup.enter="onEnter" v-model="score2"></input>
+    </p>
 </div>
 <script type="text/javascript">
     var app = new Vue({
         el: '#app',
         data: {
-            message: 'hello World Vue'
+            score: 0,
+            score2: 1
+        },
+        methods: {
+            add: function () {
+                this.score++;
+            },
+            decrease: function () {
+                this.score--;
+            },
+            onEnter: function () {
+                this.score = this.score + parseInt(this.score2);
+            }
         }
     })
 </script>
